@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('description');
             $table->unsignedBigInteger('parent_category')->nullable();
             $table->foreign('parent_category')->references('id')->on('categories')->onDelete('cascade');

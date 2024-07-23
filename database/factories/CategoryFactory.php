@@ -20,6 +20,8 @@ class CategoryFactory extends Factory
     {
         return [
            'name' => $this->faker->word,
+           'image'=> $this->faker->image,
+           'description'=> $this->faker->word,
             'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'updated_at' => now(),
         ];
